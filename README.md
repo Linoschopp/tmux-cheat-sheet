@@ -8,27 +8,27 @@ Eine übersichtliche Zusammenfassung der wichtigsten TMUX-Befehle.
 ## Sessions
 
 - **Session erstellen**  
+  Erstellt eine neue Session (optional mit Session- und Fensternamen).  
   ```
   tmux new-session [-s session_name] [-n window_name]
   : new [-s session_name]
   ```
-  Erstellt eine neue Session (optional mit Session- und Fensternamen).  
   *Alias*: `new`  
 
 - **Session beenden**  
+  Löscht alle Sessions außer der angegebenen oder der aktuellen  
   ```
   tmux kill-session [-t session_name]
   ```
-  Löscht alle Sessions außer der angegebenen oder der aktuellen  
   *Alias*: `kill-ses`  
   *Option* `-a`:  
     Beendet alle Sessions **außer** die angegebene  
   
 - **Session attatchen**  
+  Öffnet die letzte oder eine bestimmten Session.  
   ```
   tmux attatch-session [-t session_name]
   ```  
-  Öffnet die letzte oder eine bestimmten Session.  
   *Aliases*: `attatch`, `at`, `a`  
   *Option* `-d`: Detatcht andere  
 
