@@ -21,8 +21,7 @@ Eine übersichtliche Zusammenfassung der wichtigsten TMUX-Befehle.
   tmux kill-session [-t session_name]
   ```
   *Alias*: `kill-ses`  
-  *Option* `-a`:  
-    Beendet alle Sessions **außer** die angegebene  
+  *Option* `-a`: Beendet alle Sessions **außer** die angegebene  
   
 - **Session attatchen**  
   Öffnet die letzte oder eine bestimmten Session.  
