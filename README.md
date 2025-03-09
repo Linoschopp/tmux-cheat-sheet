@@ -12,44 +12,32 @@ Eine übersichtliche Zusammenfassung der wichtigsten TMUX-Befehle.
   tmux
   ```
 
-- **Neue Session erstellen**  
+- **Session erstellen**  
   ```
-  tmux new-session[^0] [-s session_name] [-n window_name]
+  tmux new-session [-s session_name] [-n window_name]
   : new [-s session_name]
-  ```  
-  *Erstellt eine neue Session (optional mit Session- und Fensternamen).*
-
-- **Aktuelle Session beenden**  
   ```
-  : kill-session
-  ```  
+  Erstellt eine neue Session (optional mit Session- und Fensternamen).  
+  *Alias*: `new`  
 
-- **Bestimmte Session beenden**  
+- **Session beenden**  
   ```
-  tmux kill-session -t <session_name>
-  ```  
+  tmux kill-session [-t session_name]
+  ```
+  Löscht alle Sessions außer der angegebenen oder der aktuellen  
   *Alias*: `kill-ses`  
-
-- **Alle Sessions außer eine löschen**  
-  ```
-  tmux kill-session -a [-t session_name]
-  ```  
-  *Alias*: `kill-ses`  
-  Löscht alle Sessions außer der angegebenen oder der aktuellen
+  *Option* `-a`:  
+    Beendet alle Sessions **außer** die angegebene  
+  
 
 - **Session umbenennen**  
   ```
   ^b $
   ```  
 
-- **Session detachten**  
+- **Session detatchen**  
   ```
   ^b d
-  ```  
-
-- **Attatchen und andere detatchen**  
-  ```
-  : attatch -d
   ```  
 
 - **Sessions auflisten**  
@@ -58,12 +46,14 @@ Eine übersichtliche Zusammenfassung der wichtigsten TMUX-Befehle.
   ```  
   *Alias*: `ls`  
 
-- **Session wechseln**  
+- **Session attatchen**  
   ```
   tmux attatch-session [-t session_name]
   ```  
-  Aliases: `attatch`, `at`, `a`
-  *Öffnet die letzte oder eine bestimmten Session.*
+  Öffnet die letzte oder eine bestimmten Session.  
+  *Aliases*: `attatch`, `at`, `a`  
+  *Option* `-d`:  
+  - Detatcht andere
 
 - **Session- und Fenster-Vorschau anzeigen**  
   ```
@@ -198,4 +188,3 @@ Eine übersichtliche Zusammenfassung der wichtigsten TMUX-Befehle.
 
 ---
 
-[^0]: Alias: new
