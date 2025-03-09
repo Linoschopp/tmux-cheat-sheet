@@ -7,11 +7,6 @@ Eine übersichtliche Zusammenfassung der wichtigsten TMUX-Befehle.
 
 ## Sessions
 
-- **TMUX starten**  
-  ```
-  tmux
-  ```
-
 - **Session erstellen**  
   ```
   tmux new-session [-s session_name] [-n window_name]
@@ -29,15 +24,23 @@ Eine übersichtliche Zusammenfassung der wichtigsten TMUX-Befehle.
   *Option* `-a`:  
     Beendet alle Sessions **außer** die angegebene  
   
-
-- **Session umbenennen**  
+- **Session attatchen**  
   ```
-  ^b $
+  tmux attatch-session [-t session_name]
   ```  
+  Öffnet die letzte oder eine bestimmten Session.  
+  *Aliases*: `attatch`, `at`, `a`  
+  *Option* `-d`: Detatcht andere  
+
 
 - **Session detatchen**  
   ```
   ^b d
+  ```  
+
+- **Session umbenennen**  
+  ```
+  ^b $
   ```  
 
 - **Sessions auflisten**  
@@ -45,15 +48,6 @@ Eine übersichtliche Zusammenfassung der wichtigsten TMUX-Befehle.
   tmux list-sessions
   ```  
   *Alias*: `ls`  
-
-- **Session attatchen**  
-  ```
-  tmux attatch-session [-t session_name]
-  ```  
-  Öffnet die letzte oder eine bestimmten Session.  
-  *Aliases*: `attatch`, `at`, `a`  
-  *Option* `-d`:  
-  - Detatcht andere
 
 - **Session- und Fenster-Vorschau anzeigen**  
   ```
@@ -74,7 +68,7 @@ Eine übersichtliche Zusammenfassung der wichtigsten TMUX-Befehle.
 
 ## Windows
 
-- **Neues Fenster erstellen**  
+- **Fenster erstellen**  
   ```
   ^b c
   ```
@@ -84,7 +78,7 @@ Eine übersichtliche Zusammenfassung der wichtigsten TMUX-Befehle.
   ^b ,
   ```
 
-- **Aktuelles Fenster schließen**  
+- **Fenster schließen**  
   ```
   ^b &
   ```
@@ -94,7 +88,7 @@ Eine übersichtliche Zusammenfassung der wichtigsten TMUX-Befehle.
   ^b w
   ```
 
-- **Zwischen Fenstern wechseln**  
+- **Fenster wechseln**  
   - Zum vorherigen Fenster:  
     ```
     ^b p
@@ -141,15 +135,15 @@ Eine übersichtliche Zusammenfassung der wichtigsten TMUX-Befehle.
   : split-window -v
   ```  
 
-- **Pane nach links verschieben**  
-  ```
-  ^b {
-  ```
-
-- **Pane nach rechts verschieben**  
-  ```
-  ^b }
-  ```
+- **Pane verschieben**  
+  - Links:
+    ```
+    ^b {
+    ```
+  - Rechts:
+    ```
+    ^b }
+    ```
 
 - **Zwischen Panes wechseln**  
   ```
