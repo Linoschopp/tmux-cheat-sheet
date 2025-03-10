@@ -23,16 +23,16 @@ Eine übersichtliche Zusammenfassung der wichtigsten TMUX-Befehle.
   *Alias*: `kill-ses`  
   *Option* `-a`: Beendet alle Sessions **außer** die angegebene  
   
-- **Session attatchen**  
+- **Session attachen**  
   Öffnet die letzte oder eine bestimmten Session.  
   ```
-  tmux attatch-session [-t session_name]
+  tmux attach-session [-t session_name]
   ```  
-  *Aliases*: `attatch`, `at`, `a`  
-  *Option* `-d`: Detatcht andere  
+  *Aliases*: `attach`, `at`, `a`  
+  *Option* `-d`: Detacht andere  
 
 
-- **Session detatchen**  
+- **Session detachen**  
   ```
   ^b d
   ```  
